@@ -1,5 +1,5 @@
 import java.util.Arrays;
-public class Greatest {
+ public class Greatest {
     static int maxNumber(int arr[], int n) {
         if (n < 3) {
             return -1;
@@ -9,13 +9,13 @@ public class Greatest {
                 arr[n - 1] * arr[n - 2] * arr[n - 3]);
     }
     public static void main(String[] args) {
-        int arr[] = {1,2,3,4,5,-6};
+        int arr[] = {-6, -4, 1, 2, -3 };
         int n = arr.length;
         int max = maxNumber(arr, n);
         if (max == -1) {
-            System.out.println("Not exists");
+            System.out.println("Not Exists");
         } else {
-            System.out.println("Product of three numbers is " + max);
+            System.out.println("Product of three number is " + max);
         }
  
     }
