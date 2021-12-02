@@ -1,0 +1,22 @@
+import java.util.Arrays;
+public class Greatest {
+    static int maxNumber(int arr[], int n) {
+        if (n < 3) {
+            return -1;
+        }
+        Arrays.sort(arr);
+        return Math.max(arr[0] * arr[1] * arr[n - 1],
+                arr[n - 1] * arr[n - 2] * arr[n - 3]);
+    }
+    public static void main(String[] args) {
+        int arr[] = {1,2,3,4,5,-6};
+        int n = arr.length;
+        int max = maxNumber(arr, n);
+        if (max == -1) {
+            System.out.println("Not exists");
+        } else {
+            System.out.println("Product of three numbers is " + max);
+        }
+ 
+    }
+}
